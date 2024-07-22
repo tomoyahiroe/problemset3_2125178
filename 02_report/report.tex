@@ -1,0 +1,53 @@
+% !TEX program = lualatex
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{luatexja-fontspec}
+\usepackage{luatexja-ruby} % ルビを使用する場合に必要
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage[top=25truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
+%\usepackage{xcolor}
+
+% フォントの設定
+%\setmainfont{Noto Serif JP}    % 通常の明朝体
+%\setsansfont{Noto Sans JP}     % 通常のゴシック体
+%\setmonofont{Noto Sans Mono JP} % 等幅フォント
+%\setmainjfont{Noto Serif JP}   % 日本語の明朝体
+%\setsansjfont{Noto Sans JP}    % 日本語のゴシック体
+%\setmonojfont{Noto Sans Mono JP} % 日本語の等幅フォント
+
+% 図の参照パス
+\graphicspath{{./01_code/output/}}
+
+% コードのスタイル設定
+\lstset{
+  basicstyle=\ttfamily\small, % フォントのサイズとスタイル
+  %keywordstyle=\color{blue},  % キーワードの色
+  %commentstyle=\color{gray},  % コメントの色
+  %stringstyle=\color{red},    % 文字列の色
+  numbers=left,               % 行番号を左側に表示
+  %numberstyle=\tiny\color{gray}, % 行番号のスタイル
+  breaklines=true,            % 長い行を折り返す
+	frame=single,               % コードブロックに枠をつける
+}
+
+\begin{document}
+\parindent = 0pt
+
+% タイトル
+\title{ミクロデータサイエンス\\Problemset3}
+\author{2125178\\廣江友哉}
+\date{\today}
+\maketitle
+
+
+% 段落
+\section{Step 2 回帰分析}
+
+
+
+\end{document}
+
+
+
