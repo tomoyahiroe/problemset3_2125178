@@ -72,10 +72,27 @@
   }
 \end{lstlisting}
 
-\subsection{回帰分析結果の解釈}
+\subsection{回帰分析表のアウトプット}
 
 \includegraphics[width=18cm]{regression_table.png}
 
+\subsection{モデル1の推定値の95\%信頼区間}
+
+\begin{centering}
+  \begin{gather}
+    1.09 - 1.96 \times SE_{HAC}(\hat{\beta_1}) \le \hat{\beta_1} \le 1.09 + 1.96 \times SE_{HAC}(\hat{\beta_1}) \\
+    1.09 - 1.96 \times 0.17 \le \hat{\beta_1} \le 1.09 + 1.96 \times 0.17 \\
+    0.7568 \le \hat{\beta_1} \le 1.4232
+  \end{gather}
+\end{centering}
+
+\begin{centering}
+  \begin{gather}
+    0.39 - 1.96 \times SE_{HAC}(\hat{\beta_2}) \le \hat{\beta_2} \le 0.39 + 1.96 \times SE_{HAC}(\hat{\beta_2}) \\
+    0.39 - 1.96 \times 0.15 \le \hat{\beta_2} \le 1.09 + 1.96 \times 0.15 \\
+    0.096 \le \hat{\beta_2} \le 0.684
+  \end{gather}
+\end{centering}
 
 \end{document}
 
