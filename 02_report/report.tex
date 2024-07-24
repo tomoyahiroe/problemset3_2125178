@@ -80,7 +80,7 @@
 
 \begin{centering}
   \begin{gather}
-    1.09 - 1.96 \times SE_{HAC}(\hat{\beta_1}) \le \hat{\beta_1} \le 1.09 + 1.96 \times SE_{HAC}(\hat{\beta_1}) \\
+    1.09 - 1.96 \times SE(\hat{\beta_1}) \le \hat{\beta_1} \le 1.09 + 1.96 \times SE(\hat{\beta_1}) \\
     1.09 - 1.96 \times 0.17 \le \hat{\beta_1} \le 1.09 + 1.96 \times 0.17 \\
     0.7568 \le \hat{\beta_1} \le 1.4232
   \end{gather}
@@ -88,7 +88,7 @@
 
 \begin{centering}
   \begin{gather}
-    0.39 - 1.96 \times SE_{HAC}(\hat{\beta_2}) \le \hat{\beta_2} \le 0.39 + 1.96 \times SE_{HAC}(\hat{\beta_2}) \\
+    0.39 - 1.96 \times SE(\hat{\beta_2}) \le \hat{\beta_2} \le 0.39 + 1.96 \times SE(\hat{\beta_2}) \\
     0.39 - 1.96 \times 0.15 \le \hat{\beta_2} \le 1.09 + 1.96 \times 0.15 \\
     0.096 \le \hat{\beta_2} \le 0.684
   \end{gather}
@@ -98,6 +98,15 @@
 
 有意水準を5\%で検定をすると，$\beta_1 = 0$ は 95\%の信頼区間から外れるため，帰無仮説は棄却される．\\
 同様にして，$\beta_2 = 0$は95\%の信頼区間から外れるため，帰無仮説は棄却される．
+
+\subsection{帰無仮説 $\beta_1 = 1$ を棄却できるか }
+
+\subsection{モデル2，モデル5の解釈}
+
+モデル2は “努力” が欠落した分，親の所得のlog の係数 $\hat{\gamma_2}$ は 0.63 と 真のモデルの係数 $\hat{\beta_2}$ の 0.39 よりも大きい値となっている．つまり，このモデルには欠落変数バイアスが存在する．
+
+モデル5は “努力” に測定誤差があることで，真のモデルと比較して係数が 0.47 と低い値となている．これは測定誤差が説明変数にある時に発生する減衰バイアスである．
+
 
 
 \end{document}
