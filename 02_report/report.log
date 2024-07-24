@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.6.11)  22 JUL 2024 08:59
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.6.11)  24 JUL 2024 18:10
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -777,10 +777,39 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <14.4> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 46.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 13.85594pt on input line 46.
-(load cache: extra_haranoajigothic-medium.luc) [1
+(load cache: extra_haranoajigothic-medium.luc)
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <12> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 48.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 48.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <12> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 48.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 48.
+(load cache: extra_lmmono10-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 50.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 50.
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'.(load cache: extr
+a_lmroman9-regular.luc)
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+<regression_table.png, id=1, 990.70125pt x 578.16pt>
+File: regression_table.png Graphic file (type png)
+<use regression_table.png>
+Package luatex.def Info: regression_table.png  used on input line 77.
+(luatex.def)             Requested size: 512.1496pt x 298.88052pt.
+
+Overfull \hbox (11.6656pt too wide) in paragraph at lines 77--78
+[] 
+ []
+
+[1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./report.aux)
+[2<./regression_table.png>] (./report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -788,26 +817,29 @@ L3 programming layer <2024-02-20>
 )
 
 Here is how much of LuaTeX's memory you used:
- 9079 strings out of 476447
- 125244,1977958 words of node,token memory allocated
- 1073 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 219 attribute, 52 glue_sp
-ec, 30 attribute_list, 1 write, 13 user_defined nodes
-   avail lists: 1:18,2:2568,3:30,4:52,5:22,6:10,7:312,8:2,9:102,10:10,11:4
- 30968 multiletter control sequences out of 65536+600000
- 44 fonts using 32914551 bytes
- 107i,6n,101p,1908b,274s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 9232 strings out of 476447
+ 382261,1977958 words of node,token memory allocated
+ 1104 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 231 attribute, 53 glue_sp
+ec, 31 attribute_list, 1 write, 13 user_defined nodes
+   avail lists: 1:40,2:63089,3:104,4:8419,5:5703,6:62,7:5567,8:6,9:11897,10:19,1
+1:342
+ 31119 multiletter control sequences out of 65536+600000
+ 50 fonts using 40997063 bytes
+ 107i,6n,101p,1908b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAji
-Gothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/l
-mroman12-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/l
-mroman12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/l
-m/lmroman17-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
-c/haranoaji/HaranoAjiMincho-Regular.otf>
-Output written on report.pdf (1 page, 17087 bytes).
+tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.
+otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman9-regula
+r.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Harano
+AjiGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/l
+m/lmroman12-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/l
+m/lmroman12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
+c/lm/lmroman17-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/pu
+blic/haranoaji/HaranoAjiMincho-Regular.otf>
+Output written on report.pdf (2 pages, 115039 bytes).
 
-PDF statistics: 50 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+PDF statistics: 69 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

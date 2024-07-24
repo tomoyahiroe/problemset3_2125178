@@ -18,7 +18,7 @@
 %\setmonojfont{Noto Sans Mono JP} % 日本語の等幅フォント
 
 % 図の参照パス
-\graphicspath{{./01_code/output/}}
+% \graphicspath{{../01_code/output/}}
 
 % コードのスタイル設定
 \lstset{
@@ -31,7 +31,7 @@
   breaklines=true,            % 長い行を折り返す
 	frame=single,               % コードブロックに枠をつける
 }
-
+\renewcommand\thesubsection{\Alph{subsection}}
 \begin{document}
 \parindent = 0pt
 
@@ -45,6 +45,36 @@
 % 段落
 \section{Step 2 回帰分析}
 
+\subsection{write\_regression\_models の修正}
+
+\begin{lstlisting}
+  write_regression_models <- function() {
+    regression_models <- list(
+      # correct model
+      "(1)" = log10(income_child) ~ effort + log10(income_parent),
+
+      # ommited variables models
+      # model 2
+      "(2)" = log10(income_child) ~ log10(income_parent),
+      # model 3
+      "(3)" = log10(income_child) ~ effort,
+
+      # measurementerror models
+      # model 4
+      "(4)" = log10(income_child_noisy) ~ effort + log10(income_parent),
+      # model 5
+      "(5)" = log10(income_child) ~ effort_noisy + log10(income_parent),
+      # model 6
+      "(6)" = log10(income_child) ~ effort + log10(income_parent_noisy)
+    )
+
+    return(regression_models)
+  }
+\end{lstlisting}
+
+\subsection{回帰分析結果の解釈}
+
+\includegraphics[width=18cm]{regression_table.png}
 
 
 \end{document}

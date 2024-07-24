@@ -1,14 +1,14 @@
 main <- function() {
   # packages
-  # library(ggplot2)
-  # library(dplyr)
-  # library(tidyr)
-  # library(purrr)
-  # library(estimatr)
-  # library(kableExtra)
+  library(ggplot2)
+  library(dplyr)
+  library(tidyr)
+  library(purrr)
+  library(estimatr)
+  library(kableExtra)
 
   # set seed num (学籍番号)
-  set.seed()
+  set.seed(2125178)
 
   df_simulation <- generate_simulate_df()
 
@@ -51,7 +51,7 @@ generate_simulate_df <- function() {
     log_income_parent = rnorm(household_n, log_income_parent_mean, log_income_parent_sd),
     income_error_household = rnorm(household_n, 0, income_disturbance_household)
   ) |>
-    mutate(
+    dplyr::mutate(
       log_income_parent_noisy = log_income_parent + rnorm(household_n, 0, income_parent_measurementerror)
     )
 
@@ -68,7 +68,7 @@ generate_simulate_df <- function() {
 
   # combine data
   df_simulation <- df_parent |>
-    mutate(
+    dplyr::mutate(
       # effort
       effort = alpha_0 + alpha_1 * log_income_parent + list_effort_error,
       effort_noisy = effort + list_effort_noisy,
@@ -86,7 +86,7 @@ generate_simulate_df <- function() {
       #  sibling_id
       sibling_id = rep(1:2, each = household_n)
     ) |>
-    select(
+    dplyr::select(
       household_id,
       sibling_id,
       income_child,
@@ -114,11 +114,11 @@ write_regression_models <- function() {
 
     # measurementerror models
     # model 4
-    "(4)" = log10(income_child) ~ effort + log10(income_parent),
+    "(4)" = log10(income_child_noisy) ~ effort + log10(income_parent),
     # model 5
-    "(5)" = log10(income_child) ~ effort + log10(income_parent),
+    "(5)" = log10(income_child) ~ effort_noisy + log10(income_parent),
     # model 6
-    "(6)" = log10(income_child) ~ effort + log10(income_parent)
+    "(6)" = log10(income_child) ~ effort + log10(income_parent_noisy)
   )
 
   return(regression_models)
@@ -127,7 +127,7 @@ write_regression_models <- function() {
 
 run_regression <- function(df_simulation, regression_models) {
   # run regressions
-  full_regs <- map(
+  full_regs <- purrr::map(
     regression_models,
     ~ lm_robust(.x,
       clusters = household_id,
@@ -160,4 +160,3 @@ run_regression <- function(df_simulation, regression_models) {
 
 
 main()
-
